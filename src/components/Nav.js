@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 export default function Nav() {
   return (
     <nav>
-      <h2>LOGO</h2>
+      <h2>Book Haven</h2>
       <ul>
         <li>
           <NavLink to="/">Home</NavLink>

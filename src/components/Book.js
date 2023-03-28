@@ -38,13 +38,13 @@ function Book({ book }) {
         <h3>{book.name}</h3>
         {/* <h3>Borrowed</h3> */}
         {book.available ? (
-          <button type="button" onClick={handleClick}>
+          <button className="btnAvailable" type="button" onClick={handleClick}>
             Available
           </button>
         ) : (
           <p>Not Available</p>
         )}
-        <button type="button" onClick={handleDelete}>
+        <button className="btnDelete" type="button" onClick={handleDelete}>
           Delete
         </button>
       </div>

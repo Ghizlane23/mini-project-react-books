@@ -20,31 +20,45 @@ const AddBook = () => {
   };
 
   return (
-    <Formik initialValues={initialValues} onSubmit={onSubmit}>
-      {({ isSubmitting }) => (
-        <Form>
-          <div>
-            <h2> Name:</h2>
-            <Field type="text" name="name" />
-          </div>
-          <div>
-            <h2>Image:</h2>
-            <Field type="text" name="image" />
-          </div>
-          <div>
-            <h2>details:</h2>
-            <Field type="text" name="details" />
-          </div>
-          <div>
-            <h2>Available:</h2>
-            <Field type="checkbox" name="available" />
-          </div>
-          <button type="submit" disabled={isSubmitting}>
-            Add Book
-          </button>
-        </Form>
-      )}
-    </Formik>
+    <div className="form-container">
+      <Formik initialValues={initialValues} onSubmit={onSubmit}>
+        {({ isSubmitting, values }) => (
+          <Form>
+            <div className="form-group">
+              <label className="form-label"> Name:</label>
+              <Field type="text" name="name" className="form-control" />
+            </div>
+
+            <div className="form-group">
+              <label className="form-label">Image:</label>
+              <Field type="text" name="image" className="form-control" />
+            </div>
+
+            <div className="form-group">
+              <label className="form-label">details:</label>
+              <Field type="text" name="details" className="form-control" />
+            </div>
+
+            <div className="form-group">
+              <h2>Available:</h2>
+              <Field
+                type="checkbox"
+                name="available"
+                checked={values.available}
+              />
+            </div>
+
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className="btn btn-primary"
+            >
+              Add Book
+            </button>
+          </Form>
+        )}
+      </Formik>
+    </div>
   );
 };
 
