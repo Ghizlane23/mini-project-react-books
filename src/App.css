@@ -1,38 +1,95 @@
-.App {
-  text-align: center;
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #3c3c3c;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 10px 20px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+nav h2 {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.home {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 2rem;
+  line-height: 1.5;
+}
+.home h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.home p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  align-items: center;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.book-list {
+  padding: 2rem;
+}
+
+.book-list-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.book-list-content {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 2rem;
+}
+.book {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.bookcover {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  max-width: 200px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 5px;
+  margin-bottom: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+.image {
+  width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 120px;
 }
